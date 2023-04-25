@@ -9,12 +9,12 @@ import java.util.Objects;
 public class Details {
     private Double price;
     private Integer beds;
-    private Integer baths;
+    private Double baths;
     private Integer sqFt;
 
     public Details() {}
 
-    public Details(Double price, Integer beds, Integer baths, Integer sqFt) {
+    public Details(Double price, Integer beds, Double baths, Integer sqFt) {
         this.price = price;
         this.beds = beds;
         this.baths = baths;
@@ -37,11 +37,11 @@ public class Details {
         this.beds = beds;
     }
 
-    public Integer getBaths() {
+    public Double getBaths() {
         return baths;
     }
 
-    public void setBaths(Integer baths) {
+    public void setBaths(Double baths) {
         this.baths = baths;
     }
 
