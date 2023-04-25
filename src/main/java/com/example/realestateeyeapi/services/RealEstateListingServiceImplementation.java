@@ -59,4 +59,9 @@ public class RealEstateListingServiceImplementation implements RealEstateListing
     public RealEstateListing getListingByMlsNum(Integer mlsNum) {
         return realEstateListingRepository.findByMlsNum(mlsNum);
     }
+
+    @Override
+    public List<RealEstateListing> getByZipCode(String zipCode) {
+        return realEstateListingRepository.findByAddressZipCode(zipCode);
+    }
 }

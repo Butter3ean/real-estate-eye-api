@@ -14,5 +14,6 @@ public interface RealEstateListingService {
     RealEstateListing updateListingById(RealEstateListing newListing, Long id);
     List<RealEstateListing> getListingsByCity(String city);
     RealEstateListing getListingByMlsNum(Integer mlsNum);
+    List<RealEstateListing> getByZipCode(String zipCode);
 
 }

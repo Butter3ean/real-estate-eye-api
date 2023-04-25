@@ -34,6 +34,11 @@ public class RealEstateListingController {
         return realEstateListingService.getListingByMlsNum(mlsNum);
     }
 
+    @GetMapping(params = {"zipCode"})
+    public List<RealEstateListing> getListingByZipCOde(String zipCode) {
+        return realEstateListingService.getByZipCode(zipCode);
+    }
+
     @PostMapping
     public RealEstateListing addListing(@RequestBody RealEstateListing listing) {
         return realEstateListingService.addListing(listing);
