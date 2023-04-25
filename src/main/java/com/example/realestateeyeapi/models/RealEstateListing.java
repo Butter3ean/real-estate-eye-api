@@ -6,7 +6,6 @@ import com.example.realestateeyeapi.models.embeddables.Details;
 import com.example.realestateeyeapi.models.embeddables.URLs;
 import jakarta.persistence.*;
 
-import java.text.NumberFormat;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +13,7 @@ public class RealEstateListing {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private Integer mlsNum;
     @Embedded
     private Details details;
