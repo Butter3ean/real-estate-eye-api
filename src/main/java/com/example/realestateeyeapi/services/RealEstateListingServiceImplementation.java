@@ -4,6 +4,7 @@ import com.example.realestateeyeapi.models.RealEstateListing;
 import com.example.realestateeyeapi.repositiories.RealEstateListingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -52,7 +53,7 @@ public class RealEstateListingServiceImplementation implements RealEstateListing
 
     @Override
     public List<RealEstateListing> getListingsByCity(String city) {
-        return realEstateListingRepository.findByAddressCity(city);
+        return realEstateListingRepository.findByAddressCity(StringUtils.capitalize(city.toLowerCase()));
     }
 
     @Override
